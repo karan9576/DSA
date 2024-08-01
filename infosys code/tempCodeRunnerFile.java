@@ -1,0 +1,1 @@
+ monster m[]=new monster[n];
