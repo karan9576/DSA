@@ -1,3 +1,5 @@
+import java.util.*;
+//this is a wrong approach 
 class p7{
     static class Job{
         int deadLine;
@@ -23,7 +25,13 @@ class p7{
 
         int time=0;
         for(int i=0;i<jobs.size();i++){
-            
+            Job curr=jobs.get(i);
+            if(curr.deadLine>time){
+                time++;
+                seq.add(curr.id);
+            }
         }
+        System.out.println("the maximum jobs "+seq.size());
+        System.out.println(seq);
     }
 }
